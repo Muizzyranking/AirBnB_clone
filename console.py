@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import cmd
 
+"""Module for HBNBCommand class"""
+
 
 class HBNBCommand(cmd.Cmd):
     """
