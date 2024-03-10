@@ -1,0 +1,5 @@
+__pyc*
+*.json
+main/
+__pycache__/
+pyrightconfig.json
