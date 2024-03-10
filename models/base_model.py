@@ -4,14 +4,38 @@ from datetime import datetime
 
 # from models.engine import storage  # noqa: F401
 
-"""BaseModel class"""
+"""
+Module containing the BaseModel class.
+
+The BaseModel class defines the core attributes and methods that is
+common to all other models within the application.
+
+This includes:
+
+* A unique id for each instance
+* Tracking the time of creation and update of each instance
+* Serialization and deserialization of instances to and from JSON format
+"""
 
 
 class BaseModel:
-    """BaseModel class"""
+    """
+    Defines the base class for all models within the application.
+
+    Attributes:
+        id (str): A unique id for each instance
+        created_at (datetime): The time of creation of the instance
+        updated_at (datetime): The time of update of the instance
+
+    Methods:
+        save: Changes the updated_at attribute to the current datetime
+        and saves the instance
+        to_dict: Returns a dictionary containing all keys/values of __dict__
+        __str__: Returns a string representation of the instance
+    """
 
     def __init__(self, *args, **kwargs):
-        """init method"""
+        """Initializes a new instance of BaseModel"""
         time_format = "%Y-%m-%dT%H:%M:%S.%f"
         if kwargs:
             for key, value in kwargs.items():
