@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 import uuid
 from datetime import datetime
+import models
+
+storage = models.storage
 
 # from models.engine import storage  # noqa: F401
 
@@ -47,11 +50,13 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            storage.new(self)
 
     def save(self):
         """Changes the updated_at attribute to the current datetime
         and saves the instance"""
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """Returns a dictionary containing all keys/values of __dict__"""
