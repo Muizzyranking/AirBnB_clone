@@ -2,7 +2,7 @@
 import uuid
 from datetime import datetime
 
-from models.engine import storage  # noqa: F401
+# from models.engine import storage  # noqa: F401
 
 """BaseModel class"""
 
@@ -16,8 +16,9 @@ class BaseModel:
         if kwargs:
             for key, value in kwargs.items():
                 if key != "__class__":
-                    value = datetime.strptime(value, time_format)
-                setattr(self, key, value)
+                    if key in ("created_at", "updated_at"):
+                        value = datetime.strptime(value, time_format)
+                    setattr(self, key, value)
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
