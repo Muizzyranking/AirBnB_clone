@@ -12,9 +12,9 @@ common to all other models within the application.
 
 This includes:
 
-* A unique id for each instance
-* Tracking the time of creation and update of each instance
-* Serialization and deserialization of instances to and from JSON format
+    * A unique id for each instance
+    * Tracking the time of creation and update of each instance
+    * Serialization and deserialization of instances to and from JSON format
 """
 
 
