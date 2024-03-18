@@ -21,6 +21,7 @@ class HBNBCommand(cmd.Cmd):
 
     def emptyline(self):
         """Do nothing when an empty line is entered"""
+
         return False
 
 
