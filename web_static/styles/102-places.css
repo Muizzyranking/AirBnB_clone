@@ -1,0 +1,178 @@
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+.places {
+    margin-top: 20px;
+}
+
+.places h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.places-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.places-list article {
+    width: 390px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #FF5A5F;
+    border-radius: 4px;
+    position: relative;
+
+}
+
+.article-header {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.price_by_night {
+    color: #FF5A5F;
+    border: 3px solid #FF5A5F;
+    border-radius: 50%;
+    min-width: 60px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    /* padding: 10px 5px 5px 5px; */
+    padding: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.information {
+    height: 80px;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px 0;
+}
+
+.max_guest,
+.number_rooms,
+.number_bathrooms {
+    width: 100px;
+    /* margin-right: 20px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.max_guest img,
+.number_rooms img,
+.number_bathrooms img {
+    width: 50%;
+    height: auto;
+}
+
+.user {
+    margin: 20px 0;
+}
+
+.description {
+    text-align: justify;
+    margin: 20px 0;
+}
+
+.amenities-2,
+.reviews {
+    margin-top: 40px;
+}
+
+.info-header {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #DDDDDD;
+    text-align: left;
+    width: 100%;
+}
+
+.amenities-2 ul,
+.reviews ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.amenities-2 li {
+    display: flex;
+    align-items: center;
+}
+
+.reviews li {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+.amenities-2 li img {
+    height: 25px;
+    width: auto;
+    margin-right: 30px;
+}
+
+.reviews h3 {
+    font-size: 14px;
+    margin: 10px 0 0 0;
+    text-align: left;
+}
+
+.reviews p {
+    font-size: 12px;
+}
+
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .places-list article {
+        width: 100%;
+        /* Articles take up full width */
+        margin: 20px 10px;
+        /* Adjust spacing as needed */
+    }
+
+    .information,
+    .amenities-2,
+    .reviews {
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: flex-start;
+        /* Align items to the start */
+    }
+
+    .max_guest,
+    .number_rooms,
+    .number_bathrooms {
+        margin-bottom: 10px;
+        /* Space between info elements */
+        width: auto;
+        /* Allows for natural width of content*/
+    }
+}
+
+/* Responsive Image Adjustments */
+@media (max-width: 600px) {
+
+    /* Example breakpoint - adjust as needed */
+    /* Scale down images if needed */
+    .amenities-2 li img,
+    .information img {
+        height: 20px;
+    }
+}
