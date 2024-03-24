@@ -142,35 +142,46 @@ article {
 @media (max-width: 768px) {
     .places-list article {
         width: 100%;
-        /* Articles take up full width */
         margin: 20px 10px;
-        /* Adjust spacing as needed */
+    }
+
+    .places h1 {
+        margin: 20px 10px;
+    }
+
+    .filters h3,
+    .filters h4 {
+        margin: 10px 0 0 10px;
+    }
+
+
+    .information {
+        margin-bottom: 50px;
     }
 
     .information,
     .amenities-2,
     .reviews {
         flex-direction: column;
-        /* Stack elements vertically */
         align-items: flex-start;
-        /* Align items to the start */
     }
 
     .max_guest,
     .number_rooms,
     .number_bathrooms {
-        margin-bottom: 10px;
-        /* Space between info elements */
+        margin: 10px 0;
         width: auto;
-        /* Allows for natural width of content*/
     }
+
+    .user {
+        margin-bottom: 5px;
+    }
+
 }
 
 /* Responsive Image Adjustments */
 @media (max-width: 600px) {
 
-    /* Example breakpoint - adjust as needed */
-    /* Scale down images if needed */
     .amenities-2 li img,
     .information img {
         height: 20px;
